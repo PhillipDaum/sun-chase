@@ -14,24 +14,26 @@
   <!-- page CSS -->
   <link rel="stylesheet" href="css/style.css" />
 
-  <title class="text-info font-monospace">futuregenitals.shop</title>
+  <title class="text-info font-monospace">city-picker</title>
 </head>
 
 <!-- --------------------------- --------------- ----------- ------------ ------------ -->
 
 <!-- can set onload or delete for JS running out the gate
   make active item text light - others text-info -->
-<body class="bg-dark" onload="">
+<body class="bg-dark" onload="sunshineUS()">
   <!--NAV-->
   <div class="container-fluid">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item font-monospace"><a class="text-light" href="#">futuregenitals.shop</a></li>
+        <li class="breadcrumb-item font-monospace"><a class="text-light" href="#">city-picker</a></li>
       </ol>
     </nav>
 
     <div class="row">
-      <h1 class="text-info font-monospace">coming soon...</h1>
+      <h6 class="text-info font-monospace">some US cities by total sunshine hours</h6>
+      <div id="USsunshine" class="row ms-2 bg-dark">
+      </div>
     </div>
   </div>
   </div>
@@ -40,6 +42,7 @@
 
 <!-- JavaScript; -->
 <!-- my JS -->
+<script src="js/sunshine.js"></script>
 <script src="js/index.js"></script>
 <!-- option 2: Separate Popper and Bootstrap JS -->  
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
