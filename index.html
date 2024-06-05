@@ -21,7 +21,7 @@
 
 <!-- can set onload or delete for JS running out the gate
   make active item text light - others text-info -->
-<body class="bg-dark" onload="sunshineUS()">
+<body class="bg-dark">
   <!--NAV-->
   <div class="container-fluid">
     <nav aria-label="breadcrumb">
@@ -29,19 +29,57 @@
         <li class="breadcrumb-item font-monospace"><a class="text-light" href="#">city-picker</a></li>
       </ol>
     </nav>
+    <main>
+    <!-- Where is it likely to be sunny? -->
+    <h1 class="text-light">Where is it likely sunny?</h1>
+    <!-- choose your continent -->
+    <form id="form">
+
+      <label for="continent" class="text-light">Continent</label>
+      <select name="continent" id="continent">
+        <option value="" disabled>--Continent--</option>
+        <option value="Africa">Africa</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="North America">North America</option>
+        <option value="Oceana">Oceana</option>
+        <option value="South America">South America</option>
+      </select>
+
+      <label for="month" class="text-light">Month</label>
+      <select name="month" id="month">
+        <option value="" disabled>--Month--</option>
+        <option value="January">January</option>
+        <option value="February">February</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="Decemver">December</option>
+      </select>
+
+      <button type="submit" class="btn btn-outline-warning">Go!</button>
+
+    </form>
+
+
+    <!-- produces list of the top 10 cities likely to be sunny this month -->
 
     <div class="row">
       <h6 class="text-info font-monospace">Some US cities by total sunshine hours</h6>
       <div id="USsunshine" class="row ms-2 bg-dark">
       </div>
     </div>
-  </div>
-  </div>
 
-<!-- --------------------------- --------------- ----------- ------------ ------------ -->
 
-<!-- JavaScript; -->
-<!-- my JS -->
+  </main>
+  </div>
+  
 <script src="js/sunshine.js"></script>
 <script src="js/index.js"></script>
 <!-- option 2: Separate Popper and Bootstrap JS -->  

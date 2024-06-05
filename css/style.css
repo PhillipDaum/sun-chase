@@ -1,0 +1,25 @@
+/* 
+compare user object with city array 
+cont through the array 
+first - find all the stuff with the same continent and 
+return a new array of objects
+
+
+print the continent
+print the month
+put these above the table that will print later
+
+
+
+
+next 
+    count through those and look at the month
+
+    make a new array of just the city name and the sunshine hours for that month
+
+    then organize them by highest to lowest (sorting algorythim)
+    pop off part of it
+    put them into a list or table
+
+
+*/
