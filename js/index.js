@@ -1,57 +1,41 @@
-const form = document.getElementById("form");
-let userArray = [];
-let result = []; 
+// Global Variables
+const result = [];
+let dataObj = {};
+// user puts their info into the form and it creates an array
+// I have the code for this
 
+const form = document.getElementById("form");
 form.addEventListener("submit", onFormSubmit);
+
+// pushes all objects in 'cities' into 'result' which match user's selected continent 
+function matchContinent() {
+  for (let i = 0; i < cities.length; i++) { 
+    for (const property in cities[i]) {
+      // I would like to have this include matching the key also
+      if (cities[i][property] === dataObj.continent) {
+        result.push(cities[i])
+      }
+    }
+  }
+  console.log(result);
+}
+
 function onFormSubmit(event) {
 	event.preventDefault();
 	const data = new FormData(event.target);
-	const dataObject = Object.fromEntries(data.entries());
-
-	//above is boiler plate code
-	userArray.push(dataObject);
-	console.log(userArray);
+	dataObj = Object.fromEntries(data.entries());
+  let userContinent = dataObj.continent;
+  matchContinent();
 	form.reset();
-
-  let sunMonth = userArray[0].month;
-  console.log(typeof sunMonth, sunMonth);
-  for (let i = 0; i < cities.length; i++) {
-    // why is this undefined?
-    console.log(cities[i].sunMonth);
-    console.log(sunMonth);
-  }
-
 }
 
 
 
+// iterate through the entire array
+// if the value of continent ===  value of the key continent in the user array, push it into an new array 
+// if object.coutry === (user input), push it! 
 
-// first lets produce all of the results with the same continent
-// for loop - count through all of these
-// if the cities[i].continent === userArray[0].continent
-// then push that into result
-// variable =  is prolly just gonna be cities[i]. - the whole thing??? 
-// result.push(variable) -- it does one of these each loop
+// let result = [   ]
 
 
-// another variable will be let sunmonth = userArray.month
-
-
-
-
-// function to show what cities are likely to have sun right now
-// function sunshineUS() {
-//   for (var k = 0; k < cities.length; k++) {
-//     //if the one with the number length you are on
-//     for (cities.length[k] = ) {      
-//     if (Country = 'United States') {
-//             let printer = document.createElement('div')
-//             console.log([k].City);
-//             printer.innerHTML = cities[k].City;
-//             printer.className = "text-warning fs-3 ms-3 mb-2 font-monospace lh-sm";
-//             document.getElementById("USsunshine").appendChild(printer)
-
-//           }
-//         }
-//       }
-// }
+// then we will do the sunshine hours 
