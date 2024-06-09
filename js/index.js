@@ -1,10 +1,8 @@
 // Global Variables
-const result = [];
+let result;
 let dataObj = {};
-// user puts their info into the form and it creates an array
-// I have the code for this
-
 const form = document.getElementById("form");
+
 form.addEventListener("submit", onFormSubmit);
 
 // pushes all objects in 'cities' into 'result' which match user's selected continent 
@@ -17,25 +15,28 @@ function matchContinent() {
       }
     }
   }
-  console.log(result);
 }
 
+// sorts 'result' by 'userMonth'
+function sunMonth() {
+  let userMonth = dataObj.month;
+  result.sort((a, b) => {
+    return b[userMonth] - a[userMonth];
+   });
+}
+
+// runs program when user submits form choices
 function onFormSubmit(event) {
+  result = [];
 	event.preventDefault();
 	const data = new FormData(event.target);
 	dataObj = Object.fromEntries(data.entries());
   let userContinent = dataObj.continent;
   matchContinent();
+  sunMonth();
+  console.log(result)
 	form.reset();
 }
 
 
 
-// iterate through the entire array
-// if the value of continent ===  value of the key continent in the user array, push it into an new array 
-// if object.coutry === (user input), push it! 
-
-// let result = [   ]
-
-
-// then we will do the sunshine hours 
