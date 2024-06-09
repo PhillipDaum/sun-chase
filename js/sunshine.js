@@ -99,7 +99,7 @@ const cities = [
   },
   {
     continent: "Africa",
-    country: "Democratic Republic of the Congo",
+    country: "DR Congo",
     stateProvince: "",
     city: "Kinshasa",
     jan: 124,
@@ -783,7 +783,7 @@ const cities = [
   },
   {
     continent: "Africa",
-    country: "Democratic Republic of the Congo",
+    country: "DR Congo",
     stateProvince: "",
     city: "Lubumbashi",
     jan: 129,
