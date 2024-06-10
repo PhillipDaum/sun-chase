@@ -27,7 +27,7 @@
   <body class="bg-dark">
     <div class="container-fluid">
       <!--NAV-->
-      <nav aria-label="breadcrumb">
+      <nav class="mt-2" aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item font-monospace">
             <a class="text-light" href="#">city-picker</a>
@@ -36,9 +36,10 @@
       </nav>
       <main>
         <!-- Where is it likely to be sunny? -->
-        <h1 class="text-light">Where and when is it sunny?</h1>
+        <h1 class="text-light text-center">Where and when is it sunny?</h1>
+        <h2 class="text-light fs-4 text-center pb-1 mb-3 border-bottom">average monthly sunshine hours</h2>
         <!-- choose your continent -->
-        <form id="form">
+        <form id="form" class="ms-2">
           <label for="continent" class="text-light">Continent</label>
           <select name="continent" id="continent">
             <option value="" disabled>--Continent--</option>
@@ -67,7 +68,9 @@
             <option value="dec">December</option>
           </select>
 
-          <button type="submit" class="btn btn-outline-warning ms-2">Go!</button>
+          <button type="submit" class="btn btn-outline-warning ms-2">
+            Go!
+          </button>
         </form>
 
         <!-- produces table of cities and sunshine hours -->
@@ -76,7 +79,7 @@
             <tr>
               <th>Country</th>
               <th>City</th>
-              <th>Sunshine*</th>
+              <th>Sunshine</th>
             </tr>
             <!-- index.js produces results here -->
           </table>

@@ -73,5 +73,3 @@ function onFormSubmit(event) {
   printTable();
   // form.reset();
 }
-
-// add a popover explaining sunshine hours
