@@ -11,11 +11,8 @@ form.addEventListener("submit", onFormSubmit);
 // pushes all objects in 'cities' into 'result' which match user's selected continent
 function matchContinent() {
   for (let i = 0; i < cities.length; i++) {
-    for (const property in cities[i]) {
-      // would like to have this include matching the key also
-      if (cities[i][property] === userObj.continent) {
+      if (cities[i].continent === userObj.continent) {
         result.push(cities[i]);
-      }
     }
   }
 }
