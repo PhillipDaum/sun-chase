@@ -5,14 +5,13 @@ let userMonth;
 let clearElement;
 const form = document.getElementById("form");
 
-
 form.addEventListener("submit", onFormSubmit);
 
 // pushes all objects in 'cities' into 'result' which match user's selected continent
 function matchContinent() {
-  for (let i = 0; i < cities.length; i++) {
-      if (cities[i].continent === userObj.continent) {
-        result.push(cities[i]);
+  for (item of cities) {
+    if (item.continent === userObj.continent) {
+      result.push(item);
     }
   }
 }
