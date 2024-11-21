@@ -63,9 +63,8 @@ function onFormSubmit(event) {
   event.preventDefault();
   const data = new FormData(event.target);
   userObj = Object.fromEntries(data.entries());
-  let userContinent = userObj.continent;
   matchContinent();
-  sunMonth();
+  sunMonth(); 
   printTable();
   // form.reset();
 }
